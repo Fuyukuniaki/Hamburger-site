@@ -1,0 +1,31 @@
+@use "../../foundation/" as *;
+
+.c-overflow {
+    &__FrontPage {
+        overflow-x: hidden;
+        &--navMenu {
+            overflow: hidden;
+        }
+    }
+    &__MainCard {
+        &--text {
+            @include media(iPhone){
+                overflow: hidden;
+            }
+        }
+    }
+    &__Map {
+        &--text {
+            @include media(iPhone){
+                overflow: visible;
+            }
+        }
+    }
+    &__NavMenu {
+        overflow: hidden;
+        &.active {
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+    }
+}

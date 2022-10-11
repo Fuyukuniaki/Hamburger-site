@@ -1,0 +1,9 @@
+@use "../../foundation/" as *;
+.p-logo {
+    display: block;
+    @include media(iPad){
+        display: block;
+        width: $headerWidth_iPad;
+        text-align: center;
+    }
+}

@@ -1,0 +1,49 @@
+@use "../../foundation/" as *;
+.p-articles{
+    &__MainCard {
+        width: 33vw;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        // aspect-ratio: 625 / 1193;
+        @include media(iPad){
+            width: 43vw;
+        }
+        @include media(iPhone){
+            width: 89.3vw;
+            min-height: 171.2vw;
+            max-height: auto;
+        }
+    }
+    &__MainMap {
+        @include media(PC){
+            display: block;
+            aspect-ratio: 950 / 649;
+        }
+        @include media(iPad){
+            display: block;
+            aspect-ratio: 1553/649;
+        }
+        @include media(iPhone){
+            display: block;
+            aspect-ratio: 1553/649;
+        }
+    }
+    &__ArchiveText {
+        display: block;
+        width: $mainArchiveW_PC;
+        @include media(iPad){
+            width: $mainArchiveW_iPad;
+        }
+    }
+    &__MainList {
+        width: $mainArchiveW_PC;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-flow: row;
+        @include media(iPad){
+            width: $mainArchiveW_iPad;
+        }
+    }
+}

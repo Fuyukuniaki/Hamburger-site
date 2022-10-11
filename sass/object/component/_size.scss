@@ -1,0 +1,82 @@
+
+@use "../../foundation/" as *;
+
+.c-size {
+    &__Single--image {
+        width: 100%;
+        height: auto;
+        &--wide {
+            width: 100%;
+            height: auto;
+        }
+    }
+    @include media(iPad){
+        &__FrontPage {
+            width:$headerWidth_iPad;
+        }
+    }
+    @include media(iPhone){
+        &__MainCard {
+            &--base {
+                width: 81vw;
+                height: 33vw;    
+            }
+            &--text {
+                height: 18.1vw;
+                width: 76vw;
+            }
+        }
+    }
+    &__Map {
+        @include media(PC){
+            width: 100%;
+            height: auto;   
+            &--text {
+                width: 49.5vw;
+                height: 100%;
+            }     
+        }
+        @include media(iPad){
+            width: $headerWidth_iPad;
+            height: 100%;
+        }
+        @include media(iPhone){
+            width: $headerWidth_iPad;
+            height: 184vw;
+            &--text {
+                width: $headerWidth_iPad;
+                height: 110vw;
+            }
+        }
+    }
+    &__Pagination--prev, &__Pagination--next {
+        width: 0.93vw;
+        height: 0.88vw;
+        @include media(iPad){
+            width: 2.1vw;
+            height: 2.1vw;
+        }
+        @include media(iPhone){
+            width: 4em;
+            height: 1em;
+            line-height: 1em;
+        }
+    }
+    &__Pagination--prev {
+        margin: auto 0 auto 2em;
+    }
+    &__Pagination--next {
+        margin: auto 2em auto 0;
+    }
+    &__Pagination--number {
+        width: clamp(2.2em, 1.82vw, 1.82vw);
+        height: clamp(2.2em, 1.82vw, 1.82vw);
+        line-height:  clamp(2.2em, 1.82vw, 1.82vw);
+    }
+    @include media(iPhone){
+        &__Footer{
+            width: $headerWidth_iPad;
+            height: 40vw;    
+        }
+    }
+}

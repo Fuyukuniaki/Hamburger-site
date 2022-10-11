@@ -1,0 +1,334 @@
+
+@use "../../foundation/" as *;
+
+.c-text-size {
+    font-size: clamp(16px, 0.83vw, 0.83vw);
+    &__Logo {
+        font-size: 3.3vw;
+        @include media(iPad){
+            font-size: 4.8vw;
+        }
+        @include media(iPhone){
+            font-size: 10.6vw;
+        }
+    }
+    &__Search {
+        font-size: 1.25vw;
+        &--button {
+            font-size: clamp(16px, 0.83vw, 0.83vw);
+            @include media(iPad){
+                font-size: 1.9vw;
+            }
+            @include media(iPhone){
+                font-size: 4.3vw;
+            }
+        }
+    }
+    &__MainTitle {
+        font-size: 2.08vw;
+        @include media(iPad){
+            font-size: 4.3vw;
+        }
+        @include media(iPhone){
+            font-size: 9.6vw;
+        }
+    }
+    &__MainArchive {
+        &--mainTitle {
+            &--text {
+                font-size: clamp(16px, 0.83vw, 0.83vw);
+            }
+        }
+    }
+    &__MainSingle--mainTitle {
+        font-size: 3.125vw;
+        @include media(iPad){
+            font-size: 7.1942vw;
+        }
+        @include media(iPhone){
+            font-size: 9.6vw;
+        }
+    }
+    &__MainPage--mainTitle {
+        font-size: 3.125vw;
+        @include media(iPad){
+            font-size: 7.1942vw;
+        }
+        @include media(iPhone){
+            font-size: 9.6vw;
+        }
+    }
+    &__MainCard--title {
+        font-size: 4.17vw;
+        @include media(iPad){
+            font-size: 5.28vw;
+        }
+        @include media(iPhone){
+            font-size: 11vw;
+        }
+    }
+    &__MainCard--textTitle {
+        font-size: 1.25vw;
+        @include media(iPad){
+            font-size: 2.8vw;
+        }
+        @include media(iPhone){
+            font-size: 5.9vw;
+        }
+    }
+    &__MainCard--text {
+        font-size: clamp(16px, 0.83vw, 0.83vw);
+        @include media(iPad){
+            font-size: 1.6vw;
+        }
+        @include media(iPhone){
+            font-size: 4.3vw;
+        }
+    }
+    &__MainMap--title {
+        font-size: 1.875vw;
+        @include media(iPad){
+            font-size: 3.6vw;
+        }
+        @include media(iPhone){
+            font-size: 8vw;
+        }
+    }
+    &__MainMap--text {
+        font-size: clamp(16px, 0.83vw, 0.83vw);
+        @include media(iPad){
+            font-size: 1.68vw;
+        }
+        @include media(iPhone){
+            font-size: 3.73vw;
+        }
+    }
+    &__MainArchive--mainTitle {
+        font-size: 3.125vw;
+        @include media(iPad){
+            font-size: 7.2vw;
+        }
+        @include media(iPhone){
+            font-size: 9.6vw;
+        }
+    }
+    &__MainArchive--text {
+        font-size: clamp(16px, 0.83vw, 0.83vw);
+        @include media(iPad){
+            font-size: clamp(16px, 1.92vw, 1.92vw);
+        }
+    }
+    &__ArchiveText {
+        &--title {
+            font-size: 1.875vw;
+            @include media(iPad){
+                font-size: 4.32vw;
+            }
+        }
+        &--text {
+            font-size: clamp(16px, 0.83vw, 0.83vw);
+            @include media(iPad){
+                font-size: clamp(16px, 1.92vw, 1.92vw);
+            }
+        }
+    }
+    &__Pagination {
+        font-size: clamp(16px, 0.83vw, 0.83vw);
+        &--prev, &--next {
+            font-size: clamp(16px, 0.83vw, 0.83vw);
+        }
+    }
+    &__NavTitle {
+        font-size: 1.77vw;
+        @include media(iPad){
+            font-size: 4.08vw;
+        }
+    }
+    &__NavMenu {
+        font-size: 1.25vw;
+        @include media(iPad){
+            font-size: 2.9vw;
+        }
+        @include media(iPhone){
+            font-size: 6.4vw;
+        }
+    }
+    &__NavMenu--sub {
+        font-size: 1.04vw;
+        @include media(iPad){
+            font-size: 2.4vw;
+        }
+        @include media(iPhone){
+            font-size: 5.3vw;
+        }
+    }
+    &__Footer--link {
+        font-size: 1.04vw;
+        @include media(iPhone){
+            font-size: 5.3vw;
+        }
+    }
+    &__Footer--copyright {
+        font-size: 0.73vw;
+        @include media(iPhone){
+            font-size: 3.73vw;
+        }
+    }
+}
+.c-text-weight {
+    font-weight: $textFont_WeightRegular;
+    &--bold {
+        font-weight: $textFont_WeightBold;
+    }
+    &--regular {
+        font-weight: $textFont_WeightRegular;
+    }
+}
+.c-text-text-align {
+    &--center {
+        text-align: center;
+    }
+    &--right {
+        text-align: right;
+    }
+}
+.c-text-color {
+    &__Logo {
+        color: $textColor_Gray;
+    }
+    &__Search {
+        color: $textColor_Gray;
+    }
+    &__MainTitle {
+        color: $textColor_White;
+    }
+    &__MainCard--title {
+        color: $textColor_PGray;
+    }
+    &__MainCard--textTitle {
+        color: $textColor_Brown;
+    }
+    &__MainCard--text {
+        color: $textColor_Brown;
+    }
+    &__MainMap--title {
+        color: $textColor_White;
+    }
+    &__MainMap--text {
+        color: $textColor_White;
+    }
+    &__ArchiveText {
+        color: $textColor_Brown;
+    }
+    &__Pagination {
+        color: $textColor_Gray;
+        & > .active {
+            color: $textColor_White;
+        }
+        &--prev, &--next {
+            color: transparent;
+            @include media(iPhone){
+                color: $textColor_Gray
+            }
+        }
+
+    }
+    &__NavTitle {
+        color: $textColor_Gray;
+    }
+    &__NavMenu {
+        color: $textColor_Gray;
+    }
+    &__Footer--link {
+        color: $textColor_White;
+    }
+    &__Footer--copyright {
+        color: $textColor_White;
+    }
+}
+.c-text-border {
+    &__MainCard {
+        &--title {
+            display: inline-block;
+            &::after {
+                display: block;
+                content: "";
+                width: 2.91vw;
+                height: 3.28vw;
+                border-bottom: 0.21vw solid $textColor_PGray;
+                @include media(iPad){
+                    width: 4.3vw;
+                    height: 3.7vw;
+                    border-bottom: 0.48vw solid $textColor_PGray;
+                }
+                @include media(iPhone){
+                    width: 9.04vw;
+                    height: 4vw;
+                    border-bottom: 1.1vw solid $textColor_PGray;
+                }
+            }
+        }
+    }
+    &__MainMap {
+        &--title {
+            display: inline-block;
+            &::after {
+                display: block;
+                content: "";
+                width: 3.9vw;
+                height: 2.92vw;
+                border-bottom: 0.104vw solid $textColor_White;
+                margin-bottom: 3.33vw;
+                @include media(iPad){
+                    width: 9vw;
+                    height: 3.1vw;
+                    border-bottom: 0.24vw solid $textColor_White;
+                }
+                @include media(iPhone){
+                    width: 20vw;
+                    height: 4.8vw;
+                    border-bottom: 0.53vw solid $textColor_White;
+                }
+            }
+        }
+    }
+}
+.c-text-line-height{
+    &__MainMap--text {
+        line-height: 2em;
+    }
+    &__MainArchive--mainTitle--text {
+        line-height: normal;
+        vertical-align: middle;
+        @include media(iPhone){
+            line-height: clamp(16px, 4.3vw, 4.3vw);
+        }
+    }
+}
+.c-text-indent {
+    &--subMenu {
+        text-indent: clamp(16px, 0.83vw, 0.83vw);
+    }
+    &__MainArchive--mainTitle--text {
+        text-indent: 1.04vw;
+        display: inline-block;
+        @include media(iPhone){
+            text-indent: 0;
+        }
+    }
+}
+.c-text-separate {
+    &__Footer {
+        &--list {
+            &::after {
+                content:"|";
+                display: inline;
+            }
+        }
+    }
+}
+.c-text-decoration {
+    &__None {
+        text-decoration: none;
+    }
+}

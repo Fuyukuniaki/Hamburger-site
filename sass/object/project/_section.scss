@@ -1,0 +1,139 @@
+@use "../../foundation/" as *;
+
+.p-section {
+    &__PageTitle {
+        @include media(PC){
+            display: block;
+            height: 27.6vw;
+            width: $headerWidth_PC;
+        }
+        @include media(iPad){
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 34vw;
+            width: $headerWidth_iPad;
+        }
+        @include media(iPhone){
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height:74.7vw;
+            width: $headerWidth_iPad;
+        }
+    }
+    &__MainCard {
+        @include media(PC){
+            width: 69.375vw;
+            height: minmax(62.13vw,auto);
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+        }
+        @include media(iPad){
+            width: 90.7vw;
+            height: minmax(62.13vw,auto);
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+        }
+        @include media(iPhone){
+            width: 89.3vw;
+            max-height: auto;
+            gap: 5.33vw;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+        }
+    }
+    &__MainMap {
+        display: block;
+        aspect-ratio: 1553 / 649;
+    }
+    &__MainArchive {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        width: $headerWidth_PC;
+        height: auto;
+        &--title {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 12.45vw;
+            @include media(iPad){
+                height: 34vw;
+            }
+            @include media(iPhone){
+                justify-content: center;
+                align-items: flex-start;
+                flex-flow: column;
+                height: 58vw;
+                padding: 12.47vw 0 12.23vw 10.31vw;
+            }
+        }
+    }
+    &__MainSingle--title {
+        width: $headerWidth_PC;
+        height: 26vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-flow: row;
+        @include media(iPad){
+            width: $headerWidth_iPad;
+            height: 59.95vw;
+        }
+    }
+    &__MainPage--title {
+        width: $headerWidth_PC;
+        height: 26vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-flow: row;
+        @include media(iPad){
+            width: $headerWidth_iPad;
+            height: 59.95vw;
+        }
+    }
+    &__ArchiveText {
+        width: $headerWidth_PC;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        @include media(iPad){
+            width: $mainArchiveW_iPad;
+        }
+    }
+    &__SingleText {
+        margin: 3.125vw 5.2vw auto 5.2vw;
+        @include media(iPad){
+            margin: 7.194vw 7.194vw auto 7.194vw;
+        }
+        @include media(iPhone){
+            margin: 8vw 5.333vw 49.07vw 5.333vw;
+        }
+    }
+    &__Archive-list {
+        &--list {
+            width: $mainArchiveW_PC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+        }
+        &--pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-flow: row;
+            margin: 7.8125vw auto 3.3vw auto;
+            @include media(iPhone){
+                width: $mainArchiveW_iPad;
+            }
+        }
+    }
+}

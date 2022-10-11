@@ -1,0 +1,99 @@
+
+@use "../../foundation/" as *;
+
+.c-background {
+    background-color: $textColor_White;
+    &__Header   {
+        background-color: $bgColor_Header;
+    }
+    &__NavMenu  {
+        background-color: $bgColor_NavMenu;
+    }
+    &__MainTitle {
+        background-image: image-set(url(/images/mainvisual-pc.jpg) 1x, url(/images/mainvisual-pc@2x.jpg) 2x);
+        background-image: -webkit-image-set(url(/images/mainvisual-pc.jpg) 1x, url(/images/mainvisual-pc@2x.jpg) 2x);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include media(iPhone){
+            background-image: image-set(url(/images/mainvisual-sp.jpg) 1x, url(/images/mainvisual-sp@2x.jpg) 2x);
+            background-image: -webkit-image-set(url(/images/mainvisual-sp.jpg) 1x, url(/images/mainvisual-sp@2x.jpg) 2x);
+            background-position: bottom right;
+        }
+    }
+    &__MainArchive--title {
+        background-image: url(/images/page-title_archive.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #000;
+        // background-blend-mode: darken;
+    }
+    &__Single--main {
+        background: $bgColor_CardBase;
+    }
+    &__Page--main {
+        background: $bgColor_CardBase;
+    }
+    &__MainSingle--title {
+        background-image: url(/images/page-title_burger.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__MainPage--title {
+        background-image: url(/images/page-title_shop@2x.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__MainCard {
+        &--takeout {
+            background: url(/images/bg_takeout.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &--eatin {
+            background: url(/images/bg_eatin.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &--text {
+            background-color: $bgColor_CardText;
+        }
+    }
+    &__Map {
+        &--text  {
+            background-color: $bgColor_MapText;
+        }
+        &--img   {
+            background: center / cover no-repeat url(/images/map.png), $bgColor_MapImg;
+        }
+    }
+    &__Pagination{
+        &--prev {
+            background-image: url(/images/ico_prev.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        &--number {
+            background-color: $textColor_White;
+            border: 1px solid $textColor_Gray;
+            &.active {
+                background-color: $bgColor_Archive;
+            }
+        }
+        &--next {
+            background-image: url(/images/ico_next.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            @include media(iPhone){
+                background-position: right;
+            }
+        }
+
+    }
+    &--Footer   {
+        background-color: $bgColor_Footer;
+    }
+}

@@ -1,0 +1,15 @@
+
+@use "../../foundation/" as *;
+
+.c-color {
+    color: $textColor_Gray;
+    &__White {
+        color: $textColor_White;
+    }
+    &__PGray {
+        color: $textColor_PGray;
+    }
+    &__Brown {
+        color: $textColor_Brown;
+    }
+}

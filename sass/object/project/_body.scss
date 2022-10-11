@@ -1,0 +1,40 @@
+@use "../../foundation/" as *;
+
+.p-body__Shade {
+    @include media(iPad){
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        opacity: 0;
+        width: $headerWidth_iPad;
+        height: 100vh;
+        background-color: $bgColor_NavBase;
+        z-index: -1;
+        transition: opacity 900ms 100ms, z-index 100ms 900ms;
+        &.inactive {
+            z-index: 1;
+            opacity: 1;
+            transition: opacity 900ms 100ms, z-index 100ms;
+        }
+    }
+    @include media(iPhone){
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: $headerWidth_iPad;
+        height: 100vh;
+        background-color: $bgColor_NavBase;
+        z-index: -1;
+        transition: opacity 900ms 100ms, z-index 100ms 900ms;
+        &.inactive {
+            z-index: 1;
+            opacity: 1;
+            transition: opacity 900ms 100ms, z-index 100ms;
+        }
+    }
+}

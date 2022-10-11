@@ -1,0 +1,132 @@
+@use "../../foundation/" as *;
+
+
+.c-margin {
+    &__AllZero {
+        margin: 0;
+    }
+    &__Logo {
+        @include media(PC){
+            margin: 3.8vw auto auto 3.5vw;
+        }
+        @include media(iPad){
+            margin: 6vw auto auto auto;
+        }
+        @include media(iPhone){
+            margin: 12vw auto auto auto;
+        }
+    }
+    &__search {
+        margin: 4.5vw 1.6vw 4.4vw auto;
+    }
+    &__MainTitle {
+        margin: 12.2vw auto 12.5px 4.7vw;
+        @include media(iPad){
+            margin: auto auto auto 10vw;
+        }
+    }
+    &__MainSingle--mainTitle {
+        margin: auto auto auto 4.48vw;
+    }
+    &__MainPage--mainTitle {
+        margin: auto;
+    }
+    &__MainCard {
+            margin: 6.1vw auto 7vw auto;
+        &--title {
+            margin: 2.4vw auto 2.9vw 0.98vw;
+        }
+        &--border {
+            margin: auto auto auto 1.4vw;
+        }
+        &--textBox {
+            margin: min(34.375vw) 0 0 0;
+            @include media(iPhone){
+                margin: min(75vw) 0 0 0;
+            }
+        }
+        &--textTitle {
+            margin: 0 auto 1.0vw 0;
+        }
+        &--text {
+            margin: 0 0 1.04vw 0;
+            @include media(iPhone){
+                margin: 0 0 4vw 0;
+            }
+        }
+    }
+    &__MainMap--title {
+        margin: 0 2.8vw auto 0;
+    }
+    &__MainMap--border {
+        margin: 3.8vw auto 3.3vw 0;
+    }
+    &__MainArchive {
+        margin: 0 auto 3.65vw auto;
+        &--mainTitle {
+            margin: auto 1.04vw auto 4.48vw;
+            @include media(iPad){
+                margin: 12.47vw 1.04vw 12.23vw 10.31vw;
+            }
+            @include media(iPhone){
+                margin: 0;
+            }
+        }
+    }
+    &__ArchiveText {
+        margin: 3.125vw auto 3.3vw auto;
+        &--title {
+            margin: 0 0 1.3vw 0;
+        }
+        &--text {
+            margin: auto;
+        }
+    }
+    &__Pagination{
+        &--fraction {
+            margin: 0 0.78125vw 0 0;
+        }
+        &--prev, &--next {
+            margin: 0 0.78125vw 0 0;
+        }
+        &--number {
+            margin: 0 0.78125vw 0 0;
+        }
+    }
+    &__NavTitle {
+        margin: 4.89vw auto 5.15vw 2.5vw;
+    }
+    &__NavMenu {
+        margin: 0 auto 2.39vw 2.4vw;
+        @include media(iPhone){
+            margin: 0 auto auto 12.5vw;
+        }
+    }
+    &__NavMenuSub {
+        margin: 0 auto 3.1vw 0;
+        &--title {
+            margin: 0 auto 2.083vw 0;
+            @include media(iPhone){
+                margin: 9.1vw auto 10.6vw 0;
+            }
+        }
+        &--text {
+            margin: 0 auto 1.6vw 0;
+            @include media(iPhone){
+                margin: 5.3vw auto 0 5.3vw;
+            }
+        }
+    }
+    &__Footer--link {
+        margin: 2.3vw auto 0 auto;
+        @include media(iPhone){
+            margin: 16vw auto 0 auto;
+        }
+    }
+    &__Footer--copyright {
+        margin: 2vw auto 1.5vw auto;
+        @include media(iPhone){
+            margin: 9vw auto 8vw auto;
+        }
+    }
+}

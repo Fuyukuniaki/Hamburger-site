@@ -1,0 +1,45 @@
+@use "../../foundation/" as *;
+
+.p-nav {
+    @include media(PC){
+        &__NavMenu {
+            width: $navMenuWidth_PC;
+            height: 100%;
+            &--title {
+                width: $navMenuWidth_PC;
+            }
+            &--subMenu {
+                width: $navMenuWidth_PC;
+                max-height: 100%;
+            }
+        }
+    }
+    @include media(iPad) {
+        &__NavMenu {
+            width: $navMenuWidth_iPad;
+            height: 100%;
+            &--title {
+                visibility: hidden;
+                width: $navMenuWidth_iPad;
+            }
+            &--subMenu {
+                width: $navMenuWidth_iPad;
+                min-height: 100%;
+            }
+        }
+    }
+    @include media(iPhone){
+        &__NavMenu {
+            width: $navMenuW_iPhone;
+            height: 100%;
+            &--title {
+                visibility: hidden;
+                width: $navMenuW_iPhone;
+            }
+            &--subMenu {
+                width: $navMenuW_iPhone;
+                min-height: 100%;
+            }
+        }
+    }
+}

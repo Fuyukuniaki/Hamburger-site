@@ -1,0 +1,20 @@
+@use "../foundation/" as *;
+
+.l-main {
+    display: flex;
+    width: $headerWidth_PC;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column wrap;
+    @include media(iPad){
+        width: $headerWidth_iPad;
+    }
+    &__archive {
+        justify-content: center;
+        align-items: flex-start;
+        flex-flow: column wrap;
+        @include media(iPad){
+            align-items: center;
+        }
+    }
+}

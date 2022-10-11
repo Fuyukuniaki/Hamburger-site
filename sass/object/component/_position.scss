@@ -1,0 +1,46 @@
+@use "../../foundation/" as *;
+
+@include media (iPad) {
+    .c-position {
+        &__FrontPage {
+            position: relative;
+            &.inactive {
+                position: fixed;
+            }
+        }
+        &__NavMenu {
+            position: fixed;
+            top: 0;
+            left: 100%;
+            right: $navMenuWidth_iPad * -1;
+            transition: 1000ms;
+            &.active {
+                overscroll-behavior: contain;
+                left: $headerWidth_iPad - $navMenuWidth_iPad;
+                right: 0;
+            }
+        }
+    }
+}
+@include media (iPhone) {
+    .c-position {
+        &__FrontPage {
+            position: relative;
+            &.inactive {
+                position: fixed;
+            }
+        }
+        &__NavMenu {
+            position: fixed;
+            top: 0;
+            left: 100%;
+            right: $navMenuW_iPhone * -1;
+            transition: 1000ms;
+            &.active {
+                overscroll-behavior: contain;
+                left: $headerWidth_iPad - $navMenuW_iPhone;
+                right: 0;
+            }
+        }
+    }
+}
