@@ -14,6 +14,34 @@
                 </article>
                 <ul class="p-section__Archive-list">
                     <li class="p-section__Archive-list--list">
+                    <?php
+                        if( have_posts() ) :
+                            while( have_posts() ) :
+                                the_post(); ?>
+                        <article  id="post-<?php the_ID(); ?>" <?php post_class("p-articles__MainList c-background__MainList c-padding__MainList c-margin__MainList"); ?>>
+                            <dl class="c-mainlist">
+                                <dd class="c-mainlist__Image">
+                                    <figure class="c-mainlist__Image--wrap">
+                                        <img class="c-mainlist__Image--image" src="/wp-content/uploads/menu-cheese.jpg" alt="">
+                                    </figure>
+                                </dd>
+                                <dd class="c-mainlist__Text">
+                                    <h2 class="c-mainlist__Text--title"><?php the_title(); ?></h2>
+                                    <!--<h3 class="c-mainlist__Text--subTitle">小見出しが入ります</h3>-->
+                                    <p class="c-mainlist__Text--text">
+                                    <?php the_excerpt(); ?>
+                                    </p>
+                                    <button onclick="location.href='<?php the_permalink(); ?>'" class="c-mainlist__Text--button">詳しく見る</button>
+                                </dd>
+                            </dl>
+                        </article>
+                        <?php endwhile;
+                        else :
+                            ?><p>表示する記事がありません</p><?php
+                        endif;
+                    ?>
+                    <!--                    
+                    <li class="p-section__Archive-list--list">
                         <article class="p-articles__MainList c-background__MainList c-padding__MainList c-margin__MainList">
                             <dl class="c-mainlist">
                                 <dd class="c-mainlist__Image">
@@ -115,7 +143,7 @@
                     <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">9</a></li>
                     <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">10</a></li>
                     <li class="c-mainlist__Pagination--next c-size__Pagination--next c-background__Pagination--next c-margin__Pagination--next"><a class="c-size__Pagination--next c-text-size__Pagination--next c-text-color__Pagination--next c-text-text-align--right" href="#">次へ</a></li>
-                </ul>
+                </ul>-->
             </section>
         </main>
 

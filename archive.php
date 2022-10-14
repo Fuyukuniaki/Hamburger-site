@@ -3,7 +3,7 @@
         <main class="l-main l-main__archive c-grid__FrontPage-main c-background__FrontPage-main">
             <section class="p-section__MainArchive--title c-background__MainArchive--title">
                 <h2 class="c-text-color__MainTitle c-text-size__MainArchive--mainTitle c-margin__MainArchive--mainTitle">Menu:</h2>
-                <p class="c-text-color__MainTitle c-text-size__MainArchive--mainTitle--text c-text-line-height__MainArchive--mainTitle--text c-text-indent__MainArchive--mainTitle--text c-text-weight">チーズバーガー</p>
+                <p class="c-text-color__MainTitle c-text-size__MainArchive--mainTitle--text c-text-line-height__MainArchive--mainTitle--text c-text-indent__MainArchive--mainTitle--text c-text-weight"><?php the_category(' , ','single',false); ?></p>
             </section>
             <section class="p-section__ArchiveText">
                 <article class="p-articles__ArchiveText c-margin__ArchiveText c-text-color__ArchiveText">
@@ -14,7 +14,11 @@
                 </article>
                 <ul class="p-section__Archive-list">
                     <li class="p-section__Archive-list--list">
-                        <article class="p-articles__MainList c-background__MainList c-padding__MainList c-margin__MainList">
+                    <?php
+                        if( have_posts() ) :
+                            while( have_posts() ) :
+                                the_post(); ?>
+                        <article  id="post-<?php the_ID(); ?>" <?php post_class("p-articles__MainList c-background__MainList c-padding__MainList c-margin__MainList"); ?>>
                             <dl class="c-mainlist">
                                 <dd class="c-mainlist__Image">
                                     <figure class="c-mainlist__Image--wrap">
@@ -22,16 +26,21 @@
                                     </figure>
                                 </dd>
                                 <dd class="c-mainlist__Text">
-                                    <h2 class="c-mainlist__Text--title">チーズバーガー</h2>
-                                    <h3 class="c-mainlist__Text--subTitle">小見出しが入ります</h3>
+                                    <h2 class="c-mainlist__Text--title"><?php the_title(); ?></h2>
+                                    <!--<h3 class="c-mainlist__Text--subTitle">小見出しが入ります</h3>-->
                                     <p class="c-mainlist__Text--text">
-                                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                    <?php the_excerpt(); ?>
                                     </p>
-                                    <button class="c-mainlist__Text--button">詳しく見る</button>
+                                    <button onclick="location.href='<?php the_permalink(); ?>'" class="c-mainlist__Text--button">詳しく見る</button>
                                 </dd>
                             </dl>
                         </article>
-                        <article class="p-articles__MainList c-background__mainlist c-padding__mainlist c-margin__mainlist">
+                        <?php endwhile;
+                        else :
+                            ?><p>表示する記事がありません</p><?php
+                        endif;
+                    ?>
+                        <!-- <article class="p-articles__MainList c-background__mainlist c-padding__mainlist c-margin__mainlist">
                             <dl class="c-mainlist">
                                 <dd class="c-mainlist__Image">
                                     <figure class="c-mainlist__Image--wrap">
@@ -64,9 +73,17 @@
                                     <button class="c-mainlist__Text--button">詳しく見る</button>
                                 </dd>
                             </dl>
-                        </article>
+                        </article> -->
                     </li>
                 </ul>
+                <?php if ( $wp_query -> max_num_pages > 1 ) : //ページ数が1を超える場合に処理 ?>
+                    <ul class="p-section__Archive-list--pagination c-text-size__Pagination c-text-color__Pagination">
+                        <li class="c-mainlist__Pagination--fraction c-margin__Pagination--fraction"><span class="c-text-size__Pagination--fraction--title">page</span> 1/10</li>
+                        <li class="c-mainlist__Pagination--prev c-size__Pagination--prev c-background__Pagination--prev  c-margin__Pagination--prev"><a class="c-size__Pagination--number" href=""><?php next_posts_link(); ?></li>
+                        <li class="c-mainlist__Pagination--next c-size__Pagination--next c-background__Pagination--next c-margin__Pagination--next"><a class="c-size__Pagination--next c-text-size__Pagination--next c-text-color__Pagination--next c-text-text-align--right" href=""><?php previous_posts_link(); ?></li>
+                    </ul>
+                <?php endif; ?>
+            <!-- 
                 <ul class="p-section__Archive-list--pagination c-text-size__Pagination c-text-color__Pagination">
                     <li class="c-mainlist__Pagination--fraction c-margin__Pagination--fraction"><span class="c-text-size__Pagination--fraction--title">page</span> 1/10</li>
                     <li class="c-mainlist__Pagination--prev c-size__Pagination--prev c-background__Pagination--prev  c-margin__Pagination--prev"><a class="c-size__Pagination--prev c-text-size__Pagination--prev c-text-color__Pagination--prev" href="#">前へ</a></li>
@@ -81,7 +98,7 @@
                     <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">9</a></li>
                     <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">10</a></li>
                     <li class="c-mainlist__Pagination--next c-size__Pagination--next c-background__Pagination--next c-margin__Pagination--next"><a class="c-size__Pagination--next c-text-size__Pagination--next c-text-color__Pagination--next c-text-text-align--right" href="#">次へ</a></li>
-                </ul>
+                </ul> -->
             </section>
         </main>
 
