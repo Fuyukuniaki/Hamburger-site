@@ -2048,4 +2048,100 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 .p-button__clickable.clicked:hover {
   cursor: pointer;
 }
+
+#menu-nav-menu {
+  color: #707070;
+  margin: 0 auto 2.39vw 2.4vw;
+}
+@media only screen and (max-width:599px) {
+  #menu-nav-menu {
+    margin: 0 auto auto 12.5vw;
+  }
+}
+@media only screen and (min-width:835px) {
+  #menu-nav-menu {
+    width: 19vw;
+    max-height: 100%;
+  }
+}
+@media only screen and (max-width:834px) {
+  #menu-nav-menu {
+    width: 44vw;
+    min-height: 100%;
+  }
+}
+@media only screen and (max-width:599px) {
+  #menu-nav-menu {
+    width: 87.5vw;
+    min-height: 100%;
+  }
+}
+#menu-nav-menu > .menu-item {
+  margin: 0 auto 3.1vw 0;
+  font-size: 1.25vw;
+}
+@media only screen and (max-width:834px) {
+  #menu-nav-menu > .menu-item {
+    font-size: 2.9vw;
+  }
+}
+@media only screen and (max-width:599px) {
+  #menu-nav-menu > .menu-item {
+    font-size: 6.4vw;
+  }
+}
+#menu-nav-menu > .menu-item > a {
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0 auto 2.083vw 0;
+}
+@media only screen and (max-width:599px) {
+  #menu-nav-menu > .menu-item > a {
+    margin: 9.1vw auto 10.6vw 0;
+  }
+}
+#menu-nav-menu > .menu-item > .sub-menu > .menu-item > a {
+  text-decoration: none;
+  text-indent: clamp(16px, 0.83vw, 0.83vw);
+  margin: 0 auto 1.6vw 0;
+  font-size: 1.04vw;
+}
+@media only screen and (max-width:834px) {
+  #menu-nav-menu > .menu-item > .sub-menu > .menu-item > a {
+    font-size: 2.4vw;
+  }
+}
+@media only screen and (max-width:599px) {
+  #menu-nav-menu > .menu-item > .sub-menu > .menu-item > a {
+    margin: 5.3vw auto 0 5.3vw;
+    font-size: 5.3vw;
+  }
+}
+
+#menu-foot_navi {
+  display: flex;
+  flex-flow: row nowrap;
+}
+#menu-foot_navi > .menu-item {
+  display: inline;
+  font-size: 1.04vw;
+  color: #FFFFFF;
+}
+@media only screen and (max-width:599px) {
+  #menu-foot_navi > .menu-item {
+    font-size: 5.3vw;
+  }
+}
+#menu-foot_navi > .menu-item::after {
+  content: "|";
+  margin: 0 0.7em;
+  display: inline;
+}
+#menu-foot_navi > .menu-item:last-of-type::after {
+  display: none;
+}
+#menu-foot_navi > .menu-item > a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */
