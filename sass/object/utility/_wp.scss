@@ -37,13 +37,14 @@
         & > .sub-menu > .menu-item > a {
             text-decoration: none;
             text-indent: clamp(16px, 0.83vw, 0.83vw);
-            margin: 0 auto 1.6vw 0;
+            margin: 0 auto 1.6vw clamp(16px, 0.83vw, 0.83vw);
             font-size: 1.04vw;
             @include media(iPad){
                 font-size: 2.4vw;
+                margin: 0 auto 1.6vw clamp(16px, 2.4vw, 2.4vw);
             }
             @include media(iPhone){
-                margin: 5.3vw auto 0 5.3vw;
+                margin: 5.3vw auto 0 clamp(16px, 5.3vw, 5.3vw);
                 font-size: 5.3vw;
             }
         }

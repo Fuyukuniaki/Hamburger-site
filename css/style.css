@@ -290,21 +290,21 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   background-color: #F2EDE9;
 }
 .c-background__MainTitle {
-  background-image: image-set(url(/wp-content/uploads/mainvisual-pc.jpg) 1x, url(/wp-content/uploads/mainvisual-pc@2x.jpg) 2x);
-  background-image: -webkit-image-set(url(/wp-content/uploads/mainvisual-pc.jpg) 1x, url(/wp-content/uploads/mainvisual-pc@2x.jpg) 2x);
+  background-image: image-set(url(/wp-content/themes/HamburgerSite/images/mainvisual-pc.jpg) 1x, url(/wp-content/themes/HamburgerSite/images/mainvisual-pc@2x.jpg) 2x);
+  background-image: -webkit-image-set(url(/wp-content/themes/HamburgerSite/images/mainvisual-pc.jpg) 1x, url(/wp-content/themes/HamburgerSite/images/mainvisual-pc@2x.jpg) 2x);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 @media only screen and (max-width:599px) {
   .c-background__MainTitle {
-    background-image: image-set(url(/wp-content/uploads/mainvisual-sp.jpg) 1x, url(/wp-content/uploads/mainvisual-sp@2x.jpg) 2x);
-    background-image: -webkit-image-set(url(/wp-content/uploads/mainvisual-sp.jpg) 1x, url(/wp-content/uploads/mainvisual-sp@2x.jpg) 2x);
+    background-image: image-set(url(/wp-content/themes/HamburgerSite/images/mainvisual-sp.jpg) 1x, url(/wp-content/themes/HamburgerSite/images/mainvisual-sp@2x.jpg) 2x);
+    background-image: -webkit-image-set(url(/wp-content/themes/HamburgerSite/images/mainvisual-sp.jpg) 1x, url(/wp-content/themes/HamburgerSite/images/mainvisual-sp@2x.jpg) 2x);
     background-position: bottom right;
   }
 }
 .c-background__MainArchive--title {
-  background-image: url(/wp-content/uploads/page-title_archive.png);
+  background-image: url(/wp-content/themes/HamburgerSite/images/page-title_archive.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -317,24 +317,24 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   background: #FFFDFA;
 }
 .c-background__MainSingle--title {
-  background-image: url(/wp-content/uploads/page-title_burger.jpg);
+  background-image: url(/wp-content/themes/HamburgerSite/images/page-title_burger.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .c-background__MainPage--title {
-  background-image: url(/wp-content/uploads/page-title_shop@2x.jpg);
+  background-image: url(/wp-content/themes/HamburgerSite/images/page-title_shop@2x.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .c-background__MainCard--takeout {
-  background: url(/wp-content/uploads/bg_takeout.png);
+  background: url(/wp-content/themes/HamburgerSite/images/bg_takeout.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 .c-background__MainCard--eatin {
-  background: url(/wp-content/uploads/bg_eatin.png);
+  background: url(/wp-content/themes/HamburgerSite/images/bg_eatin.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -345,10 +345,10 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   background-color: rgba(0, 0, 0, 0.2901960784);
 }
 .c-background__Map--img {
-  background: center/cover no-repeat url(/wp-content/uploads/map.png), #000000;
+  background: center/cover no-repeat url(/wp-content/themes/HamburgerSite/images/map.png), #000000;
 }
 .c-background__Pagination--prev {
-  background-image: url(/wp-content/uploads/ico_prev.png);
+  background-image: url(/wp-content/themes/HamburgerSite/images/ico_prev.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -360,7 +360,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   background-color: #3C2B1C;
 }
 .c-background__Pagination--next {
-  background-image: url(/wp-content/uploads/ico_next.png);
+  background-image: url(/wp-content/themes/HamburgerSite/images/ico_next.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -2103,17 +2103,18 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 #menu-nav-menu > .menu-item > .sub-menu > .menu-item > a {
   text-decoration: none;
   text-indent: clamp(16px, 0.83vw, 0.83vw);
-  margin: 0 auto 1.6vw 0;
+  margin: 0 auto 1.6vw clamp(16px, 0.83vw, 0.83vw);
   font-size: 1.04vw;
 }
 @media only screen and (max-width:834px) {
   #menu-nav-menu > .menu-item > .sub-menu > .menu-item > a {
     font-size: 2.4vw;
+    margin: 0 auto 1.6vw clamp(16px, 2.4vw, 2.4vw);
   }
 }
 @media only screen and (max-width:599px) {
   #menu-nav-menu > .menu-item > .sub-menu > .menu-item > a {
-    margin: 5.3vw auto 0 5.3vw;
+    margin: 5.3vw auto 0 clamp(16px, 5.3vw, 5.3vw);
     font-size: 5.3vw;
   }
 }
