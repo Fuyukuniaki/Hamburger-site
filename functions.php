@@ -28,18 +28,7 @@
     }
     add_action( 'admin_init', 'hamburger_theme_add_editor_styles' );
 
-
-    // function hamburger_widgets_init() {
-    //     register_sidebar (
-    //         array(
-    //             'name'          => 'カテゴリーウィジェット',
-    //             'id'            => 'category_widget',
-    //             'description'   => 'カテゴリー用ウィジェットです',
-    //             'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    //             'after_widget'  => '</div>',
-    //             'before_title'  => '<h2><i class="fa fa-folder-open" aria-hidden="true"></i>',
-    //             'after_title'   => "</h2>\n",
-    //         )
-    //     );
-    // }
-    // add_action( 'widgets_init', 'hamburger_widgets_init' );
+    function new_excerpt_more($more) {
+        return ' ';
+    }
+    add_filter('excerpt_more', 'new_excerpt_more');

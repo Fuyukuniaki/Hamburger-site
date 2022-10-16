@@ -1,9 +1,9 @@
     <?php get_header(); ?>
-
         <main class="l-main l-main__archive c-grid__FrontPage-main c-background__FrontPage-main">
             <section class="p-section__MainArchive--title c-background__MainArchive--title">
                 <h2 class="c-text-color__MainTitle c-text-size__MainArchive--mainTitle c-margin__MainArchive--mainTitle">Menu:</h2>
-                <p class="c-text-color__MainTitle c-text-size__MainArchive--mainTitle--text c-text-line-height__MainArchive--mainTitle--text c-text-indent__MainArchive--mainTitle--text c-text-weight"><?php the_category(' , ','single',false); ?></p>
+                <p class="c-text-color__MainTitle c-text-size__MainArchive--mainTitle--text c-text-line-height__MainArchive--mainTitle--text c-text-indent__MainArchive--mainTitle--text c-text-weight">
+                    <?php single_cat_title( '', true ); ?></p>
             </section>
             <section class="p-section__ArchiveText">
                 <article class="p-articles__ArchiveText c-margin__ArchiveText c-text-color__ArchiveText">
@@ -27,10 +27,10 @@
                                 </dd>
                                 <dd class="c-mainlist__Text">
                                     <h2 class="c-mainlist__Text--title"><?php the_title(); ?></h2>
-                                    <!--<h3 class="c-mainlist__Text--subTitle">小見出しが入ります</h3>-->
-                                    <p class="c-mainlist__Text--text">
-                                    <?php the_excerpt(); ?>
-                                    </p>
+                                    <h3 class="c-mainlist__Text--subTitle"><?php wp_title( '' ); ?></h3>
+                                    <div class="wp-mainlist__Text--text">
+                                        <?php the_excerpt(); ?>
+                                    </div>
                                     <button onclick="location.href='<?php the_permalink(); ?>'" class="c-mainlist__Text--button">詳しく見る</button>
                                 </dd>
                             </dl>
@@ -76,13 +76,17 @@
                         </article> -->
                     </li>
                 </ul>
-                <?php if ( $wp_query -> max_num_pages > 1 ) : //ページ数が1を超える場合に処理 ?>
-                    <ul class="p-section__Archive-list--pagination c-text-size__Pagination c-text-color__Pagination">
-                        <li class="c-mainlist__Pagination--fraction c-margin__Pagination--fraction"><span class="c-text-size__Pagination--fraction--title">page</span> 1/10</li>
-                        <li class="c-mainlist__Pagination--prev c-size__Pagination--prev c-background__Pagination--prev  c-margin__Pagination--prev"><a class="c-size__Pagination--number" href=""><?php next_posts_link(); ?></li>
-                        <li class="c-mainlist__Pagination--next c-size__Pagination--next c-background__Pagination--next c-margin__Pagination--next"><a class="c-size__Pagination--next c-text-size__Pagination--next c-text-color__Pagination--next c-text-text-align--right" href=""><?php previous_posts_link(); ?></li>
-                    </ul>
-                <?php endif; ?>
+                <div class="p-section__Archive-list--pagination c-text-size__Pagination c-text-color__Pagination">
+                <?php
+                    global $wp_query;
+                    $big = 999999999;
+                    echo paginate_links( array(
+                        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                        'format' => '?paged=%#%',
+                        'current' => max( 1, get_query_var('paged') ),
+                        'total' => $wp_query->max_num_pages
+                    ) ); ?>
+                </div>
             <!-- 
                 <ul class="p-section__Archive-list--pagination c-text-size__Pagination c-text-color__Pagination">
                     <li class="c-mainlist__Pagination--fraction c-margin__Pagination--fraction"><span class="c-text-size__Pagination--fraction--title">page</span> 1/10</li>

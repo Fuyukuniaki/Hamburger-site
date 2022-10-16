@@ -51,7 +51,6 @@
     }
 }
 
-
 #menu-foot_navi {
     display: flex;
     flex-flow: row nowrap;
@@ -74,5 +73,14 @@
             color: $textColor_White;
             text-decoration: none;
         }
+    }
+}
+.wp-mainlist__Text--text{
+    display: inline-block;
+    width: 26.5vw;
+    min-height: 2.9vw;
+    & > p {
+        font-size: clamp(16px, 0.83vw, 0.83vw);
+        color: $textColor_White;
     }
 }

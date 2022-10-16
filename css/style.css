@@ -323,7 +323,9 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   background-position: center;
 }
 .c-background__MainPage--title {
-  background-image: url(/wp-content/themes/HamburgerSite/images/page-title_shop@2x.jpg);
+  background-image: url(/wp-content/themes/HamburgerSite/images/page-title_shop.png);
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: darken;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2144,5 +2146,15 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 #menu-foot_navi > .menu-item > a {
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.wp-mainlist__Text--text {
+  display: inline-block;
+  width: 26.5vw;
+  min-height: 2.9vw;
+}
+.wp-mainlist__Text--text > p {
+  font-size: clamp(16px, 0.83vw, 0.83vw);
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=style.css.map */
