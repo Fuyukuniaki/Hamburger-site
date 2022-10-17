@@ -28,9 +28,9 @@
                                 <dd class="c-mainlist__Text">
                                     <h2 class="c-mainlist__Text--title"><?php the_title(); ?></h2>
                                     <!--<h3 class="c-mainlist__Text--subTitle">小見出しが入ります</h3>-->
-                                    <p class="c-mainlist__Text--text">
-                                    <?php the_excerpt(); ?>
-                                    </p>
+                                    <div class="c-mainlist__Text--text">
+                                        <?php the_excerpt(); ?>
+                                    </div>
                                     <button onclick="location.href='<?php the_permalink(); ?>'" class="c-mainlist__Text--button">詳しく見る</button>
                                 </dd>
                             </dl>
@@ -144,6 +144,17 @@
                     <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">10</a></li>
                     <li class="c-mainlist__Pagination--next c-size__Pagination--next c-background__Pagination--next c-margin__Pagination--next"><a class="c-size__Pagination--next c-text-size__Pagination--next c-text-color__Pagination--next c-text-text-align--right" href="#">次へ</a></li>
                 </ul>-->
+                <div class="p-section__Archive-list--pagination c-text-size__Pagination c-text-color__Pagination">
+                <?php
+                    global $wp_query;
+                    $big = 999999999;
+                    echo paginate_links( array(
+                        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                        'format' => '?paged=%#%',
+                        'current' => max( 1, get_query_var('paged') ),
+                        'total' => $wp_query->max_num_pages
+                    ) ); ?>
+                </div>
             </section>
         </main>
 
