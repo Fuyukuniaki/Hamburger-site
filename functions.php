@@ -3,6 +3,7 @@
     add_theme_support( 'menus' );
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'html5', array( 'search-form' ) );
 
     //タイトル出力
     function hamburger_title( $title ) {
@@ -14,6 +15,7 @@
             return $title;
         }
     add_filter( 'pre_get_document_title', 'hamburger_title' );
+
     function hamburger_script() {
         wp_enqueue_style( 'webfonts', '//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&family=M+PLUS+1:wght@100;300;500;700;800;900&display=swap', array() );
         wp_enqueue_script( 'font-awesome', '//kit.fontawesome.com/958005243b.js', array() );
@@ -34,3 +36,46 @@
         return ' ';
     }
     add_filter('excerpt_more', 'new_excerpt_more');
+
+    function custom_search($search, $wp_query) {
+        global $wpdb;
+
+        //検索ページ以外だったら終了
+        if (!$wp_query->is_search)
+        return $search;
+    
+        if (!isset($wp_query->query_vars))
+        return $search;
+
+        // タグ名・カテゴリ名・カスタムフィールド も検索対象にする
+        $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
+        if ( count($search_words) > 0 ) {
+            $search = '';
+            foreach ( $search_words as $word ) {
+                if ( !empty($word) ) {
+                    $search_word = $wpdb->escape("%{$word}%");
+                    $search .= " AND (
+                            {$wpdb->posts}.post_title LIKE '{$search_word}'
+                            OR {$wpdb->posts}.post_content LIKE '{$search_word}'
+                            OR {$wpdb->posts}.ID IN (
+                                SELECT distinct r.object_id
+                                FROM {$wpdb->term_relationships} AS r
+                                INNER JOIN {$wpdb->term_taxonomy} AS tt ON r.term_taxonomy_id = tt.term_taxonomy_id
+                                INNER JOIN {$wpdb->terms} AS t ON tt.term_id = t.term_id
+                                WHERE t.name LIKE '{$search_word}'
+                            OR t.slug LIKE '{$search_word}'
+                            OR tt.description LIKE '{$search_word}'
+                            )
+                            OR {$wpdb->posts}.ID IN (
+                                SELECT distinct p.post_id
+                                FROM {$wpdb->postmeta} AS p
+                                WHERE p.meta_value LIKE '{$search_word}'
+                            )
+                    ) ";
+                }
+            }
+        }
+
+        return $search;
+    }
+    add_filter('posts_search','custom_search', 10, 2);

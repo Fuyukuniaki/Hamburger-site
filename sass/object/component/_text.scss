@@ -135,7 +135,7 @@
     &__Pagination {
         font-size: clamp(16px, 0.83vw, 0.83vw);
         &--prev, &--next {
-            font-size: clamp(16px, 0.83vw, 0.83vw);
+            font-size: 0;
         }
     }
     &__NavTitle {
@@ -231,7 +231,6 @@
                 color: $textColor_Gray
             }
         }
-
     }
     &__NavTitle {
         color: $textColor_Gray;

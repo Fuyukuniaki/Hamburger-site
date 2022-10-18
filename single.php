@@ -3,13 +3,12 @@
             <section class="p-section__MainSingle--title c-background__MainSingle--title">
                 <h1 class="c-text-color__MainTitle c-text-size__MainSingle--mainTitle c-margin__MainSingle--mainTitle c-customize__Text--h1"><?php the_title(); ?></h1>
             </section>
-            <section class="p-section__SingleText">
+            <section class="wp-section__SingleText">
             <?php
                 if( have_posts() ) :
                     while( have_posts() ) :
                         the_post(); ?>
                         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                            <h2 class="post__ttl"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                             <?php the_content(); ?>
                             <?php $args = array (
                                 'before' => '<div class="page-split">',
@@ -23,19 +22,11 @@
 
                     <?php endwhile;
                 else :
-                ?><p>表示する記事がありません</p><?php
+                ?><article class="p-articles__ArchiveText c-margin__ArchiveText c-text-color__ArchiveText">
+                <h2 class="c-text-weight--bold c-text-size__ArchiveText--title c-margin__ArchiveText--title">表示する記事がありません</h2>
+                </article><?php
                 endif; ?>
 
-                <?php if( get_previous_post() || get_next_post() ) : ?>
-                    <ul class="p-pagenation">
-                        <?php if ( get_previous_post() ) : ?>
-                        <li class="prevpostslink"><?php previous_post_link( '%link', 'Prev' ); ?></li>
-                    <?php endif; ?>
-                    <?php if( get_next_post() ): ?>
-                        <li class="prevpostslink"><?php next_post_link( '%link', 'Next' ); ?></li>
-                    <?php endif; ?>
-                    </ul>
-                <?php endif; ?>
                 <!-- <h2 class="c-customize__Text--h2">見出しh2</h2>
                 <p class="c-customize__Text--p">Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。</p>
                 <h3 class="c-customize__Text--h3">見出しh3</h3>
