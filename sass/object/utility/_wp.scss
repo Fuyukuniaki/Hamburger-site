@@ -237,7 +237,7 @@
                 }
             }
         }
-        & > figure {
+        & > figure:not(.wp-block-gallery,.wp-block-table) {
             display: flex;
             margin: 0 auto 3.125vw auto;
             width: 30.2vw;

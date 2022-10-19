@@ -2364,19 +2364,19 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
     width: 48.8vw;
   }
 }
-.wp-section__SingleText > div > figure {
+.wp-section__SingleText > div > figure:not(.wp-block-gallery, .wp-block-table) {
   display: flex;
   margin: 0 auto 3.125vw auto;
   width: 30.2vw;
   height: auto;
 }
 @media only screen and (max-width:834px) {
-  .wp-section__SingleText > div > figure {
+  .wp-section__SingleText > div > figure:not(.wp-block-gallery, .wp-block-table) {
     width: 69.66vw;
   }
 }
 @media only screen and (max-width:599px) {
-  .wp-section__SingleText > div > figure {
+  .wp-section__SingleText > div > figure:not(.wp-block-gallery, .wp-block-table) {
     width: 71.2vw;
   }
 }

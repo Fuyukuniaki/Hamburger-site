@@ -48,8 +48,13 @@ function paginations(){
     });
     $('.p-section__Archive-list--pagination')
     .prepend('<li class="c-mainlist__Pagination--fraction c-margin__Pagination--fraction"><span class="c-text-size__Pagination--fraction--title">Page </span><span class="c-mainlist__Pagination--numerator"></span>/<span class="c-mainlist__Pagination--denominator"></span></li>');
-    $('.c-mainlist__Pagination--numerator').append($('.current').text());
-    $('.c-mainlist__Pagination--denominator').append($('.c-size__Pagination--number').filter(':last').text());
+    if($('.current').text()!=''){
+        $('.c-mainlist__Pagination--numerator').append($('.current').text());
+        $('.c-mainlist__Pagination--denominator').append($('.c-size__Pagination--number').filter(':last').text());
+    } else {
+        $('.c-mainlist__Pagination--numerator').append('1');
+        $('.c-mainlist__Pagination--denominator').append('1');
+    }
 };
 
 $(window).on('load resize', function(){
