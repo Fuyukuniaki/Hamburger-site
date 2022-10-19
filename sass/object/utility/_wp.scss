@@ -356,7 +356,30 @@
             }
         }
     }
-    & table {
+    & button {
+        background: linear-gradient($linearGradientS, $linearGradientE);
+        border: 1px solid $textColor_Gray;
+        border-radius: 0.833vw;
+        font-size: clamp(0.833vw, 0.833vw, 14px);
+        width: 22.4vw;
+        height: 5.46875vw;
+        @include media(iPad){
+            border-radius: 2.4vw;
+            font-size:  clamp(1.92vw, 1.92vw, 16px);
+            width: 51.44vw;
+            height: 12.47vw;
+        }
+        @include media(iPhone){
+            border-radius: 4.27vw;
+            font-size: clamp(4.26vw, 4.26vw, 16px);
+            width: 100%;
+            height: 21.6vw;
+        }
+    }
+}
+.wp-block-table {
+    width: 100%;
+    & > table {
         background-color: $textColor_White;
         border-collapse: collapse;
         border: 1px solid $textColor_Gray;
@@ -397,26 +420,6 @@
                     }
                 }
             }
-        }
-    }
-    & button {
-        background: linear-gradient($linearGradientS, $linearGradientE);
-        border: 1px solid $textColor_Gray;
-        border-radius: 0.833vw;
-        font-size: clamp(0.833vw, 0.833vw, 14px);
-        width: 22.4vw;
-        height: 5.46875vw;
-        @include media(iPad){
-            border-radius: 2.4vw;
-            font-size:  clamp(1.92vw, 1.92vw, 16px);
-            width: 51.44vw;
-            height: 12.47vw;
-        }
-        @include media(iPhone){
-            border-radius: 4.27vw;
-            font-size: clamp(4.26vw, 4.26vw, 16px);
-            width: 100%;
-            height: 21.6vw;
         }
     }
 }

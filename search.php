@@ -22,7 +22,7 @@
                             <dl class="c-mainlist">
                                 <dd class="c-mainlist__Image">
                                     <figure class="c-mainlist__Image--wrap">
-                                        <img class="c-mainlist__Image--image" src="/wp-content/uploads/menu-cheese.jpg" alt="">
+                                        <img class="c-mainlist__Image--image" src="/wp-content/themes/HamburgerSite/images/menu-cheese.jpg" alt="">
                                     </figure>
                                 </dd>
                                 <dd class="c-mainlist__Text">
@@ -51,24 +51,12 @@
                 <?php
                     global $wp_query;
                     $big = 999999999;
-                    echo paginate_links($args);
-                    $args = array(
-                        'base'               => '%_%',
-                        'format'             => '?page=%#%',
-                        'total'              => 1,
-                        'current'            => 0,
-                        'show_all'           => True,
-                        'end_size'           => 1,
-                        'mid_size'           => 2,
-                        'prev_next'          => True,
-                        'prev_text'          => ('&laquo;'),
-                        'next_text'          => ('&raquo;'),
-                        'type'               => 'list',
-                        'add_args'           => False,
-                        'add_fragment'       => '',
-                        'before_page_number' => '',
-                        'after_page_number'  => ''
-                    ); ?>
+                    echo paginate_links( array(
+                        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                        'format' => '?paged=%#%',
+                        'current' => max( 1, get_query_var('paged') ),
+                        'total' => $wp_query->max_num_pages
+                    ) ); ?>
                 </ul>
             </section>
         </main>

@@ -22,7 +22,7 @@
                             <dl class="c-mainlist">
                                 <dd class="c-mainlist__Image">
                                     <figure class="c-mainlist__Image--wrap">
-                                        <img class="c-mainlist__Image--image" src="/wp-content/uploads/menu-cheese.jpg" alt="">
+                                        <img class="c-mainlist__Image--image" src="/wp-content/themes/HamburgerSite/images/menu-cheese.jpg" alt="">
                                     </figure>
                                 </dd>
                                 <dd class="c-mainlist__Text">
@@ -76,7 +76,7 @@
                         </article> -->
                     </li>
                 </ul>
-                <div class="p-section__Archive-list--pagination c-text-size__Pagination c-text-color__Pagination">
+                <ul class="p-section__Archive-list--pagination c-text-size__Pagination c-text-color__Pagination">
                 <?php
                     global $wp_query;
                     $big = 999999999;
@@ -86,7 +86,7 @@
                         'current' => max( 1, get_query_var('paged') ),
                         'total' => $wp_query->max_num_pages
                     ) ); ?>
-                </div>
+                </ul>
             <!-- 
                 <ul class="p-section__Archive-list--pagination c-text-size__Pagination c-text-color__Pagination">
                     <li class="c-mainlist__Pagination--fraction c-margin__Pagination--fraction"><span class="c-text-size__Pagination--fraction--title">page</span> 1/10</li>
