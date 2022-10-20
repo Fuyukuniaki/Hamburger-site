@@ -383,7 +383,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   }
 }
 .c-background--Footer {
-  background-color: #9D8670;
+  background: #9D8670 url(/wp-content/themes/HamburgerSite/images/bg_footer.png);
 }
 
 .c-mainlist {
