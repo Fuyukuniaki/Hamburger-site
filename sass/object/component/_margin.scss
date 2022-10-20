@@ -125,8 +125,8 @@
     }
     &__Footer--copyright {
         margin: 2vw auto 1.5vw auto;
-        @include media(iPhone){
-            margin: 9vw auto 8vw auto;
-        }
+        // @include media(iPhone){
+        //     margin: 9vw auto 8vw auto;
+        // }
     }
 }

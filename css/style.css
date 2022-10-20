@@ -1093,11 +1093,6 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 .c-margin__Footer--copyright {
   margin: 2vw auto 1.5vw auto;
 }
-@media only screen and (max-width:599px) {
-  .c-margin__Footer--copyright {
-    margin: 9vw auto 8vw auto;
-  }
-}
 
 .c-padding__AllZero {
   padding: 0;
@@ -1981,7 +1976,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 }
 @media only screen and (max-width:599px) {
   .p-section__Archive-list--pagination {
-    width: auto;
+    width: 91vw;
   }
   .p-section__Archive-list--pagination.flexEnd {
     justify-content: flex-end;
