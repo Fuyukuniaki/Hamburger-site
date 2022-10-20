@@ -266,8 +266,18 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 .c-size__Pagination--prev {
   margin: auto 0 auto 2em;
 }
+@media only screen and (max-width:599px) {
+  .c-size__Pagination--prev {
+    margin: 0;
+  }
+}
 .c-size__Pagination--next {
   margin: auto 2em auto 0;
+}
+@media only screen and (max-width:599px) {
+  .c-size__Pagination--next {
+    margin: 0;
+  }
 }
 .c-size__Pagination--number {
   width: clamp(2.2em, 1.82vw, 1.82vw);
@@ -388,21 +398,41 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   overflow: hidden;
   height: auto;
 }
+@media only screen and (max-width:599px) {
+  .c-mainlist__Image {
+    max-width: 91vw;
+  }
+}
 .c-mainlist__Image--wrap {
   height: 100%;
   width: auto;
   aspect-ratio: 677/471;
+}
+@media only screen and (max-width:599px) {
+  .c-mainlist__Image--wrap {
+    max-width: 91vw;
+  }
 }
 .c-mainlist__Image--image {
   height: 100%;
   width: auto;
   aspect-ratio: 677/471;
 }
+@media only screen and (max-width:599px) {
+  .c-mainlist__Image--image {
+    max-width: 91vw;
+  }
+}
 .c-mainlist__Text {
   width: 35.3vw;
   min-height: 100%;
   background: #3C2B1C;
   padding: 2.8vw 5.4vw 0 3.3vw;
+}
+@media only screen and (max-width:599px) {
+  .c-mainlist__Text {
+    max-width: 91vw;
+  }
 }
 .c-mainlist__Text--title {
   display: block;
@@ -1287,6 +1317,11 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 .c-text-size__Pagination--prev, .c-text-size__Pagination--next {
   font-size: 0;
 }
+@media only screen and (max-width:599px) {
+  .c-text-size__Pagination--prev, .c-text-size__Pagination--next {
+    font-size: 100%;
+  }
+}
 .c-text-size__NavTitle {
   font-size: 1.77vw;
 }
@@ -1390,11 +1425,6 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 }
 .c-text-color__Pagination--prev, .c-text-color__Pagination--next {
   color: transparent;
-}
-@media only screen and (max-width:599px) {
-  .c-text-color__Pagination--prev, .c-text-color__Pagination--next {
-    color: #707070;
-  }
 }
 .c-text-color__NavTitle {
   color: #707070;
@@ -1951,7 +1981,13 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 }
 @media only screen and (max-width:599px) {
   .p-section__Archive-list--pagination {
-    width: 91vw;
+    width: auto;
+  }
+  .p-section__Archive-list--pagination.flexEnd {
+    justify-content: flex-end;
+  }
+  .p-section__Archive-list--pagination.flexStart {
+    justify-content: flex-Start;
   }
 }
 
@@ -2153,6 +2189,11 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   display: inline-block;
   width: 26.5vw;
   min-height: 2.9vw;
+}
+@media only screen and (max-width:599px) {
+  .wp-mainlist__Text--text {
+    width: 100%;
+  }
 }
 .wp-mainlist__Text--text > p {
   font-size: clamp(16px, 0.83vw, 0.83vw);

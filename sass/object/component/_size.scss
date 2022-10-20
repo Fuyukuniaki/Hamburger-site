@@ -65,9 +65,15 @@
     }
     &__Pagination--prev {
         margin: auto 0 auto 2em;
+        @include media(iPhone){
+            margin: 0;
+        }
     }
     &__Pagination--next {
         margin: auto 2em auto 0;
+        @include media(iPhone){
+            margin: 0;
+        }
     }
     &__Pagination--number {
         width: clamp(2.2em, 1.82vw, 1.82vw);

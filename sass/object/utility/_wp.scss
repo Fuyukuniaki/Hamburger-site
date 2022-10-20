@@ -79,6 +79,9 @@
     display: inline-block;
     width: 26.5vw;
     min-height: 2.9vw;
+    @include media(iPhone){
+        width: 100%;
+    }
     & > p {
         font-size: clamp(16px, 0.83vw, 0.83vw);
         color: $textColor_White;

@@ -10,22 +10,34 @@
         min-width: 35.26vw;
         overflow: hidden;
         height: auto;
+        @include media(iPhone){
+            max-width: 91vw;
+        }
         &--wrap {
             height: 100%;
             width: auto;
             aspect-ratio: 677 / 471;
-        }
+            @include media(iPhone){
+                max-width: 91vw;
+            }
+            }
         &--image {
             height: 100%;
             width: auto;
             aspect-ratio: 677 / 471;
-        }
+            @include media(iPhone){
+                max-width: 91vw;
+            }
+            }
     }
     &__Text {
         width: 35.3vw;
         min-height: 100%;
         background: $bgColor_Archive;
         padding: 2.8vw 5.4vw 0 3.3vw;
+        @include media(iPhone){
+            max-width: 91vw;
+        }
         &--title {
             display: block;
             font-size: 1.875vw;
