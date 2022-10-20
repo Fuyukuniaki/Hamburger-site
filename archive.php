@@ -22,7 +22,7 @@
                             <dl class="c-mainlist">
                                 <dd class="c-mainlist__Image">
                                     <figure class="c-mainlist__Image--wrap">
-                                        <img class="c-mainlist__Image--image" src="/wp-content/themes/HamburgerSite/images/menu-cheese.jpg" alt="">
+                                        <img class="c-mainlist__Image--image" src="/wp-content/themes/Hamburger-Site/images/menu-cheese.jpg" alt="">
                                     </figure>
                                 </dd>
                                 <dd class="c-mainlist__Text">
