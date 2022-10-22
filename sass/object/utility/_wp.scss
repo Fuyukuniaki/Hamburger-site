@@ -1,10 +1,7 @@
 @use "../../foundation/" as *;
 #menu-nav-menu {
     color: $textColor_Gray;
-    margin: 0 auto 2.39vw 2.4vw;
-    @include media(iPhone){
-        margin: 0 auto auto 12.5vw;
-    }
+    padding: 0 0 2.39vw 2.4vw;
     @include media(PC){
         width: $navMenuWidth_PC;
         max-height: 100%;
@@ -14,6 +11,7 @@
         min-height: 100%;
     }
     @include media(iPhone){
+        margin: 0 auto auto 12.5vw;
         width: $navMenuW_iPhone;
         min-height: 100%;
     }
@@ -27,6 +25,7 @@
             font-size: 6.4vw;
         }
         & > a {
+            display: block;
             font-weight: $textFont_WeightBold;
             text-decoration: none;
             margin: 0 auto 2.083vw 0;
@@ -35,6 +34,7 @@
             }
         }
         & > .sub-menu > .menu-item > a {
+            display: block;
             text-decoration: none;
             text-indent: clamp(16px, 0.83vw, 0.83vw);
             margin: 0 auto 1.6vw clamp(16px, 0.83vw, 0.83vw);
@@ -226,7 +226,7 @@
                     width: 36.7vw;
                 }
                 @include media(iPhone){
-                    width: 38.4vw;
+                    width: $mainArchiveW_iPad;
                 }
             }
             & > .wp-block-media-text__content {
@@ -236,7 +236,7 @@
                     width: 46.4vw;
                 }
                 @include media(iPhone){
-                    width: 48.8vw;
+                    width: $mainArchiveW_iPad;
                 }
             }
         }
@@ -294,19 +294,19 @@
                     list-style: decimal;
                     margin: 0 0 0 4.8vw;
                     text-indent: 0.8vw;
-                    @include media(iPhone){
-                        margin: 5.33vw 0 0 0;
-                        text-indent: 4.8vw;
-                    }
+                    // @include media(iPhone){
+                    //     margin: 5.33vw 0 0 0;
+                    //     text-indent: 4.8vw;
+                    // }
                 }    
             }
             & > li:last-of-type {
                 margin: 0 0 3.125vw 4.8vw;
                 @include media(iPad){
-                    margin: 0 0 7.194vw 0;
+                    margin: 0 0 7.194vw 4.8vw;
                 }
                 @include media(iPhone){
-                    margin: 0 0 8vw 0;
+                    margin: 0 0 8vw 4.8vw;
                 }
             }
         }
@@ -325,7 +325,7 @@
                 text-indent: 1.66vw;
                 & > li {
                     @include media(iPhone){
-                        margin: 5.33vw 0 0 0;
+                        // margin: 5.33vw 0 0 0;
                         text-indent: 4.8vw;
                     }
                 }

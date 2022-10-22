@@ -17,7 +17,7 @@ function menu_slide(){
             $('.js-button__clickable').removeClass('clicked');
     }
     if(window.matchMedia("(max-width: 834px)").matches){
-        $('.js-body').prepend('<span class="p-button__clickable js-button__clickable">Menu</span>');
+        $('.js-body').prepend('<h2 class="c-text-color__NavTitle c-text-size__NavTitle p-button__clickable js-button__clickable">Menu</h2>');
         $('.js-body').prepend('<div class="js-shade p-body__Shade"></div>');
 
         $('.js-button__clickable').each(function(){
@@ -39,7 +39,7 @@ function paginations(){
             $('.next').addClass('c-size__Pagination--next c-text-size__Pagination--next c-text-color__Pagination--next c-text-text-align--right').wrap('<li class="c-mainlist__Pagination--next c-size__Pagination--next c-background__Pagination--next c-margin__Pagination--next"></li>');
         }
         else if( $(this).hasClass('dots') ) {
-            $('.dots').wrap('<li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"></li>');
+            $('.dots').wrap('<li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-text-color__Pagination--number"></li>');
         }
         else {
             $(this).addClass('c-size__Pagination--number').wrap('<li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"></li>');
@@ -58,9 +58,17 @@ function paginations(){
     if(window.matchMedia("(max-width: 599px)").matches){
         if($('.c-size__Pagination--prev').length <= 0){
             $('.p-section__Archive-list--pagination').addClass('flexEnd');
+            $('.c-mainlist__Pagination--next').addClass('jumpToNext');
         } else if($('.c-size__Pagination--next').length <= 0){
             $('.p-section__Archive-list--pagination').addClass('flexStart');
+            $('.c-mainlist__Pagination--prev').addClass('jumpToPrev');
+        } else {
+            $('.c-mainlist__Pagination--prev').addClass('jumpToPrev');
+            $('.c-mainlist__Pagination--next').addClass('jumpToNext');
         }
+    } else {
+        $('.c-mainlist__Pagination--prev').removeClass('jumpToPrev');
+        $('.c-mainlist__Pagination--next').removeClass('jumpToNext');
     }
 };
 

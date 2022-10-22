@@ -1,3 +1,13 @@
+@charset "UTF-8";
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
 ul, ol, dl, li, dt, dd, figure {
   list-style: none;
   -webkit-margin-before: 0;
@@ -114,7 +124,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   .c-grid__FrontPage {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: fit-content(11.3vw) fit-content(100%) fit-content(7.8125vw);
+    grid-template-rows: fit-content(11.3vw) 1fr fit-content(7.8125vw);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
@@ -249,6 +259,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   display: block;
   width: 0.93vw;
   height: 0.88vw;
+  margin: -1em 0 0 0;
 }
 @media only screen and (max-width:834px) {
   .c-size__Pagination--prev, .c-size__Pagination--next {
@@ -262,21 +273,15 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
     height: 1em;
     line-height: 1em;
   }
-}
-.c-size__Pagination--prev {
-  margin: auto 0 auto 2em;
-}
-@media only screen and (max-width:599px) {
-  .c-size__Pagination--prev {
-    margin: 0;
+  .c-size__Pagination--prev.jumpToPrev::before, .c-size__Pagination--next.jumpToPrev::before {
+    display: inline-block;
+    content: "前へ";
+    margin: 0 -1em 0 2em;
   }
-}
-.c-size__Pagination--next {
-  margin: auto 2em auto 0;
-}
-@media only screen and (max-width:599px) {
-  .c-size__Pagination--next {
-    margin: 0;
+  .c-size__Pagination--prev.jumpToNext::before, .c-size__Pagination--next.jumpToNext::before {
+    display: inline-block;
+    content: "次へ";
+    margin: 0 -3.5em 0 0;
   }
 }
 .c-size__Pagination--number {
@@ -1046,8 +1051,21 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 .c-margin__Pagination--fraction {
   margin: 0 0.78125vw 0 0;
 }
-.c-margin__Pagination--prev, .c-margin__Pagination--next {
-  margin: 0 0.78125vw 0 0;
+.c-margin__Pagination--prev {
+  margin: auto 0 auto 2em;
+}
+@media only screen and (max-width:599px) {
+  .c-margin__Pagination--prev {
+    margin: -1em 0 0 0;
+  }
+}
+.c-margin__Pagination--next {
+  margin: auto 2em auto 0;
+}
+@media only screen and (max-width:599px) {
+  .c-margin__Pagination--next {
+    margin: -1em 0 0 0;
+  }
 }
 .c-margin__Pagination--number {
   margin: 0 0.78125vw 0 0;
@@ -1488,12 +1506,13 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   line-height: 2em;
 }
 .c-text-line-height__MainArchive--mainTitle--text {
-  line-height: normal;
-  vertical-align: middle;
+  line-height: clamp(16px, 0.83vw, 0.83vw);
+  padding: 1.83vw 0 0 0;
 }
 @media only screen and (max-width:599px) {
   .c-text-line-height__MainArchive--mainTitle--text {
     line-height: clamp(16px, 4.3vw, 4.3vw);
+    padding: 0;
   }
 }
 
@@ -1687,6 +1706,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
     height: 100%;
   }
   .p-nav__NavMenu--title {
+    font-weight: 900;
     width: 19vw;
   }
   .p-nav__NavMenu--subMenu {
@@ -1976,13 +1996,14 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 }
 @media only screen and (max-width:599px) {
   .p-section__Archive-list--pagination {
-    width: 91vw;
-  }
-  .p-section__Archive-list--pagination.flexEnd {
-    justify-content: flex-end;
+    width: 87.5vw;
+    margin: 7.8125vw 0 3.3vw 0;
   }
   .p-section__Archive-list--pagination.flexStart {
     justify-content: flex-Start;
+  }
+  .p-section__Archive-list--pagination.flexEnd {
+    justify-content: flex-end;
   }
 }
 
@@ -2010,6 +2031,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   position: absolute;
   top: 3.6vw;
   font-size: 4.1vw;
+  font-weight: 900;
   right: 2.9vw;
   z-index: 10000;
   color: #707070;
@@ -2085,12 +2107,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 
 #menu-nav-menu {
   color: #707070;
-  margin: 0 auto 2.39vw 2.4vw;
-}
-@media only screen and (max-width:599px) {
-  #menu-nav-menu {
-    margin: 0 auto auto 12.5vw;
-  }
+  padding: 0 0 2.39vw 2.4vw;
 }
 @media only screen and (min-width:835px) {
   #menu-nav-menu {
@@ -2106,6 +2123,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 }
 @media only screen and (max-width:599px) {
   #menu-nav-menu {
+    margin: 0 auto auto 12.5vw;
     width: 87.5vw;
     min-height: 100%;
   }
@@ -2125,6 +2143,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   }
 }
 #menu-nav-menu > .menu-item > a {
+  display: block;
   font-weight: 700;
   text-decoration: none;
   margin: 0 auto 2.083vw 0;
@@ -2135,6 +2154,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   }
 }
 #menu-nav-menu > .menu-item > .sub-menu > .menu-item > a {
+  display: block;
   text-decoration: none;
   text-indent: clamp(16px, 0.83vw, 0.83vw);
   margin: 0 auto 1.6vw clamp(16px, 0.83vw, 0.83vw);
@@ -2383,7 +2403,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 }
 @media only screen and (max-width:599px) {
   .wp-section__SingleText > div > .wp-block-media-text > .wp-block-media-text__media {
-    width: 38.4vw;
+    width: 91vw;
   }
 }
 .wp-section__SingleText > div > .wp-block-media-text > .wp-block-media-text__content {
@@ -2397,7 +2417,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 }
 @media only screen and (max-width:599px) {
   .wp-section__SingleText > div > .wp-block-media-text > .wp-block-media-text__content {
-    width: 48.8vw;
+    width: 91vw;
   }
 }
 .wp-section__SingleText > div > figure:not(.wp-block-gallery, .wp-block-table) {
@@ -2468,23 +2488,17 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   margin: 0 0 0 4.8vw;
   text-indent: 0.8vw;
 }
-@media only screen and (max-width:599px) {
-  .wp-section__SingleText > div > ol > li > ol > li {
-    margin: 5.33vw 0 0 0;
-    text-indent: 4.8vw;
-  }
-}
 .wp-section__SingleText > div > ol > li:last-of-type {
   margin: 0 0 3.125vw 4.8vw;
 }
 @media only screen and (max-width:834px) {
   .wp-section__SingleText > div > ol > li:last-of-type {
-    margin: 0 0 7.194vw 0;
+    margin: 0 0 7.194vw 4.8vw;
   }
 }
 @media only screen and (max-width:599px) {
   .wp-section__SingleText > div > ol > li:last-of-type {
-    margin: 0 0 8vw 0;
+    margin: 0 0 8vw 4.8vw;
   }
 }
 .wp-section__SingleText > div > ul {
@@ -2506,7 +2520,6 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 }
 @media only screen and (max-width:599px) {
   .wp-section__SingleText > div > ul > li > ul > li {
-    margin: 5.33vw 0 0 0;
     text-indent: 4.8vw;
   }
 }

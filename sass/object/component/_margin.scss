@@ -86,8 +86,17 @@
         &--fraction {
             margin: 0 0.78125vw 0 0;
         }
-        &--prev, &--next {
-            margin: 0 0.78125vw 0 0;
+        &--prev {
+            margin: auto 0 auto 2em;
+            @include media(iPhone){
+                margin: -1em 0 0 0;
+            }
+        }
+        &--next {
+            margin: auto 2em auto 0;
+            @include media(iPhone){
+                margin: -1em 0 0 0;
+            }
         }
         &--number {
             margin: 0 0.78125vw 0 0;

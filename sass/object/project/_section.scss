@@ -132,13 +132,15 @@
             flex-flow: row;
             margin: 7.8125vw auto 3.3vw auto;
             @include media(iPhone){
-                width: $mainArchiveW_iPad;
-                &.flexEnd {
-                    justify-content: flex-end;
-                }
+                width: $navMenuW_iPhone;
+                margin: 7.8125vw 0 3.3vw 0;
                 &.flexStart {
                     justify-content: flex-Start;
                 }
+                &.flexEnd {
+                    justify-content: flex-end;
+                }
+                
             }
         }
     }

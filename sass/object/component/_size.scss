@@ -53,6 +53,7 @@
         display: block;
         width: 0.93vw;
         height: 0.88vw;
+        margin: -1em 0 0 0;
         @include media(iPad){
             width: 2.1vw;
             height: 2.1vw;
@@ -61,18 +62,16 @@
             width: 4em;
             height: 1em;
             line-height: 1em;
-        }
-    }
-    &__Pagination--prev {
-        margin: auto 0 auto 2em;
-        @include media(iPhone){
-            margin: 0;
-        }
-    }
-    &__Pagination--next {
-        margin: auto 2em auto 0;
-        @include media(iPhone){
-            margin: 0;
+            &.jumpToPrev::before {
+                display: inline-block;
+                content: "前へ";
+                margin: 0 -1em 0 2em;
+            }
+            &.jumpToNext::before {
+                display: inline-block;
+                content: "次へ";
+                margin: 0 -3.5em 0 0;
+            }
         }
     }
     &__Pagination--number {

@@ -300,10 +300,11 @@
         line-height: 2em;
     }
     &__MainArchive--mainTitle--text {
-        line-height: normal;
-        vertical-align: middle;
+        line-height: clamp(16px, 0.83vw, 0.83vw);
+        padding: 1.83vw 0 0 0;
         @include media(iPhone){
             line-height: clamp(16px, 4.3vw, 4.3vw);
+            padding: 0;
         }
     }
 }

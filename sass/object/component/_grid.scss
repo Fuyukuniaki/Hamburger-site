@@ -5,7 +5,7 @@
         &__FrontPage {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: fit-content($headerHeight_PC) fit-content(100%) fit-content($footerHeight_PC);
+            grid-template-rows: fit-content($headerHeight_PC) 1fr fit-content($footerHeight_PC);
             grid-column-gap: 0px;
             grid-row-gap: 0px;
             & > &-header {
