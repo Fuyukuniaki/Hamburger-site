@@ -1507,7 +1507,12 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
 }
 .c-text-line-height__MainArchive--mainTitle--text {
   line-height: clamp(16px, 0.83vw, 0.83vw);
-  padding: 1.83vw 0 0 0;
+  padding: 0.83vw 0 0 0;
+}
+@media only screen and (max-width:834px) {
+  .c-text-line-height__MainArchive--mainTitle--text {
+    padding: 2vw 0 0 0;
+  }
 }
 @media only screen and (max-width:599px) {
   .c-text-line-height__MainArchive--mainTitle--text {

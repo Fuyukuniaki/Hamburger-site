@@ -51,6 +51,8 @@ function paginations(){
     if($('.current').text()!=''){
         $('.c-mainlist__Pagination--numerator').append($('.current').text());
         $('.c-mainlist__Pagination--denominator').append($('.c-size__Pagination--number').filter(':last').text());
+    } else if($('.p-section__Archive-list--pagination').children().length == 1){
+        $('.p-section__Archive-list--pagination').remove();
     } else {
         $('.c-mainlist__Pagination--numerator').append('1');
         $('.c-mainlist__Pagination--denominator').append('1');
