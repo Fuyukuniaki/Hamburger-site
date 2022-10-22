@@ -75,7 +75,16 @@
                 }
             }
         }
-
         return $search;
     }
     add_filter('posts_search','custom_search', 10, 2);
+
+    function searchin_change_posts_per_page( $query ) {
+        if ( is_admin() || ! $query->is_main_query() ) {
+          return;
+        }
+        if ( $query->is_search() ) {
+          $query->set( 'posts_per_page', 5 );
+        }
+      }
+      add_action( 'pre_get_posts', 'searchin_change_posts_per_page' );

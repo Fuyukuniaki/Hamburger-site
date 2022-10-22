@@ -40,40 +40,7 @@
                             ?><p>表示する記事がありません</p><?php
                         endif;
                     ?>
-                        <!-- <article class="p-articles__MainList c-background__mainlist c-padding__mainlist c-margin__mainlist">
-                            <dl class="c-mainlist">
-                                <dd class="c-mainlist__Image">
-                                    <figure class="c-mainlist__Image--wrap">
-                                        <img class="c-mainlist__Image--image" src="/wp-content/uploads/menu-cheese.jpg" alt="">
-                                    </figure>
-                                </dd>
-                                <dd class="c-mainlist__Text">
-                                    <h2 class="c-mainlist__Text--title">ダブルチーズバーガー</h2>
-                                    <h3 class="c-mainlist__Text--subTitle">小見出しが入ります</h3>
-                                    <p class="c-mainlist__Text--text">
-                                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    </p>
-                                    <button class="c-mainlist__Text--button">詳しく見る</button>
-                                </dd>
-                            </dl>
-                        </article>
-                        <article class="p-articles__MainList c-background__mainlist c-padding__mainlist c-margin__mainlist">
-                            <dl class="c-mainlist">
-                                <dd class="c-mainlist__Image">
-                                    <figure class="c-mainlist__Image--wrap">
-                                        <img class="c-mainlist__Image--image" src="/wp-content/uploads/menu-cheese.jpg" alt="">
-                                    </figure>
-                                </dd>
-                                <dd class="c-mainlist__Text">
-                                    <h2 class="c-mainlist__Text--title">スペシャルチーズバーガー</h2>
-                                    <h3 class="c-mainlist__Text--subTitle">小見出しが入ります</h3>
-                                    <p class="c-mainlist__Text--text">
-                                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                    </p>
-                                    <button class="c-mainlist__Text--button">詳しく見る</button>
-                                </dd>
-                            </dl>
-                        </article> -->
+
                     </li>
                 </ul>
                 <ul class="p-section__Archive-list--pagination c-text-size__Pagination c-text-color__Pagination">
@@ -87,22 +54,6 @@
                         'total' => $wp_query->max_num_pages
                     ) ); ?>
                 </ul>
-            <!-- 
-                <ul class="p-section__Archive-list--pagination c-text-size__Pagination c-text-color__Pagination">
-                    <li class="c-mainlist__Pagination--fraction c-margin__Pagination--fraction"><span class="c-text-size__Pagination--fraction--title">page</span> 1/10</li>
-                    <li class="c-mainlist__Pagination--prev c-size__Pagination--prev c-background__Pagination--prev  c-margin__Pagination--prev"><a class="c-size__Pagination--prev c-text-size__Pagination--prev c-text-color__Pagination--prev" href="#">前へ</a></li>
-                    <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number active"><a class="c-size__Pagination--number" href="#">1</a></li>
-                    <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">2</a></li>
-                    <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">3</a></li>
-                    <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">4</a></li>
-                    <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">5</a></li>
-                    <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">6</a></li>
-                    <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">7</a></li>
-                    <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">8</a></li>
-                    <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">9</a></li>
-                    <li class="c-mainlist__Pagination--number c-size__Pagination--number c-text-text-align--center c-margin__Pagination--number c-background__Pagination--number c-text-color__Pagination--number"><a class="c-size__Pagination--number" href="#">10</a></li>
-                    <li class="c-mainlist__Pagination--next c-size__Pagination--next c-background__Pagination--next c-margin__Pagination--next"><a class="c-size__Pagination--next c-text-size__Pagination--next c-text-color__Pagination--next c-text-text-align--right" href="#">次へ</a></li>
-                </ul> -->
             </section>
         </main>
 

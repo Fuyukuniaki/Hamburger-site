@@ -7,10 +7,7 @@
             </section>
             <section class="p-section__ArchiveText">
                 <article class="p-articles__ArchiveText c-margin__ArchiveText c-text-color__ArchiveText">
-                    <!-- <h2 class="c-text-weight--bold c-text-size__ArchiveText--title c-margin__ArchiveText--title">検索結果</h2>
-                    <p class="c-text-size__ArchiveText--text">
-                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    </p> -->
+
                 </article>
                 <ul class="p-section__Archive-list">
                     <li class="p-section__Archive-list--list">
