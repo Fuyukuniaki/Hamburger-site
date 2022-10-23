@@ -24,7 +24,6 @@
                                 </dd>
                                 <dd class="c-mainlist__Text">
                                     <h2 class="c-mainlist__Text--title"><?php the_title(); ?></h2>
-                                    <!--<h3 class="c-mainlist__Text--subTitle">小見出しが入ります</h3>-->
                                     <div class="c-mainlist__Text--text">
                                         <?php the_excerpt(); ?>
                                     </div>

@@ -230,9 +230,6 @@
         }
         &--prev, &--next {
             color: transparent;
-            // @include media(iPhone){
-            //     color: $textColor_Gray
-            // }
         }
     }
     &__NavTitle {

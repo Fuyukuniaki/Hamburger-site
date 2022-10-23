@@ -192,10 +192,8 @@
                 font-size: clamp(4.26vw, 4.26vw, 16px);
             }
             & > p {
-                // margin: 2.604vw 0 0 0;
                 font-size: clamp(0.833vw, 0.833vw, 14px);
                 @include media(iPad){
-                    // margin: 6vw 0 0 0;
                     font-size:  clamp(1.92vw, 1.92vw, 16px);
                 }
                 @include media(iPhone){
@@ -287,17 +285,12 @@
                 font-size: clamp(4.26vw, 4.26vw, 16px);
             }
             & > li > ol {
-                // margin: 1.04vw 0 0 0;
                 text-indent: 1.66vw;
                 & > li {
                     display: list-item;
                     list-style: decimal;
                     margin: 0 0 0 4.8vw;
                     text-indent: 0.8vw;
-                    // @include media(iPhone){
-                    //     margin: 5.33vw 0 0 0;
-                    //     text-indent: 4.8vw;
-                    // }
                 }    
             }
             & > li:last-of-type {

@@ -1,11 +1,9 @@
 <?php
-    //テーマサポート
     add_theme_support( 'menus' );
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'html5', array( 'search-form' ) );
 
-    //タイトル出力
     function hamburger_title( $title ) {
         if ( is_front_page() && is_home() ) { //トップページなら
             $title = get_bloginfo( 'name', 'display' );
@@ -40,14 +38,12 @@
     function custom_search($search, $wp_query) {
         global $wpdb;
 
-        //検索ページ以外だったら終了
         if (!$wp_query->is_search)
         return $search;
     
         if (!isset($wp_query->query_vars))
         return $search;
 
-        // タグ名・カテゴリ名・カスタムフィールド も検索対象にする
         $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
         if ( count($search_words) > 0 ) {
             $search = '';
