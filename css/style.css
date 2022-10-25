@@ -464,6 +464,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   height: 3.96vw;
   margin: 3.125vw 3.91vw 3.125vw 7.4vw;
   background: #FFFFFF;
+  cursor: pointer;
   font-size: clamp(16px, 0.83vw, 0.83vw);
   border: none;
   border-radius: 3.96vw;
@@ -1669,6 +1670,7 @@ a, :link, :active, :hover, :focus, :visited, :focus-within, :focus-visible, :tar
   border: 1px solid #707070;
   border-radius: 0.52vw;
   background: linear-gradient(#F2EDE9, #DED8D3);
+  cursor: pointer;
   width: 7vw;
   height: 2.4vw;
 }

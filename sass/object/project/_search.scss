@@ -79,6 +79,7 @@
         border: 1px solid $textColor_Gray;
         border-radius: 0.52vw;
         background: linear-gradient($linearGradientS, $linearGradientE);
+        cursor: pointer;
         width: 7vw;
         height: $searchHeight_PC;
         @include media(iPad){
